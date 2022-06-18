@@ -47,7 +47,7 @@ ourTodoList = myTodoList.concat(yourTodoList)
 
 // sort the following array from Z-A
 
-ourTodoList.sort()
+ourTodoList.sort = []
 
 // create a function called reverse that takes in parameter
 // this function will return the opposite of whatever is passed in
@@ -55,6 +55,22 @@ ourTodoList.sort()
 // if its a number, or a string, return the reverse (i.e. 1234 becomes 4321, Name becomes emaN)
 // if its an array, return the reversed array with each element reversed
 
+function reverse {
+if(typeof(x) === "boolean"){
+    return !x;
+} else if(typeof(x) === "string" || typeof(x) === "number"){
+    let splitX = x.split("");
+    
+    let reverseX = splitX.reverse();
+    
+    let rejoinX = reverseX.join("");
+  
+    return rejoinX;
+
+} else {
+    console.log("Passed argument must be a boolean, string, or number");
+}
+}
 
 // create a function called addingMachine that will add all passed numbers and return the total
 // Note: you don't know how many numbers will be passed
